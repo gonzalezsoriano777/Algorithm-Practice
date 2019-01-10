@@ -20,7 +20,6 @@ int main(void)
 
 int compareString(char *str1 , char *str2, int len)
 {
-    int counter = 0;
     int diff = 0;
 
     for(int i = 0; i < strlen(str1) ;i++)
