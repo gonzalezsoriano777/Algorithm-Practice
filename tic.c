@@ -15,26 +15,28 @@ void drawBoard()
 {
     int i;
     char board[9];
-    xCount = 0;
-    oCount = 0;
+    int xCount = 0;
+    int oCount = 0;
 
     for (i = 0; i < 9; i++)
     {
         if(i % 2 == 1)
         {
-            board[i] = 'X';
-            xCount++;
-        } else
-        {
             board[i] = 'O';
-            oCount++;
-        }
+            oCount ++;
+        } else
+          {
+            board[i] = 'X';
+            xCount ++;
+          }
     }
           printf(" %c | %c | %c \n", board[0], board[1], board[2]);
           printf("----+----\n");
           printf(" %c | %c | %c \n", board[3], board[4], board[5]);
           printf("----+----\n");
           printf(" %c | %c | %c \n", board[6], board[7], board[8]);
-          printf("Well guess O always marks the spot!\n");
+          printf("Well guess X always marks the spot!\n");
+          printf("X won and had %i\n", xCount);
+          printf("While Y had %i\n", oCount);
 
     }
