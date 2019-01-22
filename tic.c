@@ -7,23 +7,27 @@ void drawBoard();
 
 int main(void)
 {
-    drawBoard();
+     drawBoard();
     return 0;
 }
 
 void drawBoard()
 {
-    char board[9];
     int i;
+    char board[9];
+    xCount = 0;
+    oCount = 0;
 
     for (i = 0; i < 9; i++)
     {
         if(i % 2 == 1)
         {
             board[i] = 'X';
+            xCount++;
         } else
         {
             board[i] = 'O';
+            oCount++;
         }
     }
           printf(" %c | %c | %c \n", board[0], board[1], board[2]);
