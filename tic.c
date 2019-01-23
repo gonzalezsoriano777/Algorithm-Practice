@@ -4,7 +4,7 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
-// sets the i
+// sets the moves, size and players for "isValid function"
 #define firstPlayer 1
 #define secondPlayer 2
 #define ROW 3
