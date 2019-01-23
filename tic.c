@@ -4,8 +4,18 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
+// sets the i
+#define firstPlayer 1
+#define secondPlayer 2
+#define ROW 3
+#define COLUMN 3
+#define xToken X
+#define oToken O
+
 
 void importBoard(char string[]);
+
+void isValid(char *);
 
 int main(void)
 {
@@ -45,17 +55,19 @@ void drawBoard()
 
     }
 
-
+// Importing the state of how many X and O's will be placed in the board
 void importBoard(char string[])
 {
 
     int y;
 
 
-    for (y = 0; y < ; y++)
+    for (y = 0; y < 9; y++)
     {
+        if ()
+        {
 
-
+        }
 
     }
 
