@@ -59,10 +59,12 @@ void drawBoard()
 // Importing the state of how many X  and O's will be placed in the board
 void importBoard(char string[])
 {
+    int import = 0;
     char state[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
 
-    for (int y = 0; y < 9; y++)
+    for (int a = 0; a < 9; a++)
     {
+        import = state[a];
 
     }
 
