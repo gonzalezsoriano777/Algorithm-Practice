@@ -71,11 +71,12 @@ void importBoard(char string[])
     {
         if (storeData[0])
         {
-            import = string[xToken];
+            import = string['X'];
         } else {
-            import = string[oToken];
+            import = string['O'];
         }
-    }
 
+
+    }
 
 }
