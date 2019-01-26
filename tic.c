@@ -53,30 +53,30 @@ void drawBoard()
           printf(" %c | %c | %c \n", board[6], board[7], board[8]);
 
 
-          printf("Well guess X always marks the spot!\n");
-          printf("X won and had %i\n", xCount);
-          printf("While Y had %i\n", oCount);
+        //   printf("Well guess X always marks the spot!\n");
+        //   printf("X won and had %i\n", xCount);
+        //   printf("While Y had %i\n", oCount);
 
     }
 
 // Importing the state of how many X  and O's will be placed in the board
 void importBoard(char string[])
 {
-    int import = 0;
+    int import = 1, x;
 
     // Not sure if this array will serve to any use
     // char state[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
 
-    for (int x = 0; x < 9; x++)
+    for (x = 0; x < 9; x++)
     {
-        if (storeData[0])
+        if ()
         {
             import = string['X'];
-        } else {
+        } else if()
+          {
             import = string['O'];
-        }
-
+          }
 
     }
-
+    return 0;
 }
