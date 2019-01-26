@@ -5,12 +5,12 @@
 void drawBoard();
 
 // sets the moves, size and players for "isValid function"
-// #define firstPlayer 1
-// #define secondPlayer 2
-// #define ROW 3
-// #define COLUMN 3
-// #define xToken X
-// #define oToken O
+#define firstPlayer 1
+#define secondPlayer 2
+#define ROW 3
+#define COLUMN 3
+#define xToken X
+#define oToken O
 
 // New array that will be used and passed onto my old board Array
 char storeData[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
@@ -69,7 +69,13 @@ void importBoard(char string[])
 
     for (int x = 0; x < 9; x++)
     {
-
+        if (storeData[0])
+        {
+            import = string[xToken];
+        } else {
+            import = string[oToken];
+        }
     }
+
 
 }
