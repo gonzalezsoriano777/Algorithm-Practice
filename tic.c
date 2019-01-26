@@ -27,6 +27,7 @@ void drawBoard()
 {
     int i;
     char board[9];
+
     int xCount = 0;
     int oCount = 0;
 
@@ -58,16 +59,10 @@ void drawBoard()
 // Importing the state of how many X  and O's will be placed in the board
 void importBoard(char string[])
 {
+    char state[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
 
-    int y;
-
-
-    for (y = 0; y < 9; y++)
+    for (int y = 0; y < 9; y++)
     {
-        // if ()
-        // {
-
-        // }
 
     }
 
