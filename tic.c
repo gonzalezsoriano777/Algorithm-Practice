@@ -47,9 +47,9 @@ void drawBoard()
           printf(" %c | %c | %c \n", board[6], board[7], board[8]);
 
 
-        //   printf("Well guess X always marks the spot!\n");
-        //   printf("X won and had %i\n", xCount);
-        //   printf("While Y had %i\n", oCount);
+          printf("Well guess X always marks the spot!\n");
+          printf("X won and had %i\n", xCount);
+          printf("While Y had %i\n", oCount);
 
     }
 
@@ -66,5 +66,5 @@ void importBoard(char string[])
 
 
     }
-    return 0;
+
 }
