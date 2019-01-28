@@ -16,7 +16,7 @@ void isValid(char *);
 
 int main(void)
 {
-     drawBoard();
+    drawBoard();
     return 0;
 }
 
