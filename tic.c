@@ -4,15 +4,9 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
-
-
-// New array that will be used and passed onto my old board Array
-char storeData[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
-
+char boardGame[9] = {'1', '2', '3', '4', '5', '6', '7', '8'};
 
 void importBoard(char string[]);
-
-void isValid(char *);
 
 int main(void)
 {
@@ -25,46 +19,41 @@ void drawBoard()
     int i;
     char board[9];
 
-    int xCount = 0;
-    int oCount = 0;
+    int xCounter = 0;
+    int oCounter = 0;
 
     for (i = 0; i < 9; i++)
     {
-        if(i % 2 == 1)
+        board[i] = ' ';
+
+        if (i % 2 == 1)
         {
             board[i] = 'O';
-            oCount ++;
+            oCounter++;
         } else
-          {
+        {
             board[i] = 'X';
-            xCount ++;
-          }
-    }
-          printf(" %c | %c | %c \n", board[0], board[1], board[2]);
-          printf("----+----\n");
-          printf(" %c | %c | %c \n", board[3], board[4], board[5]);
-          printf("----+----\n");
-          printf(" %c | %c | %c \n", board[6], board[7], board[8]);
-
-
-          printf("Well guess X always marks the spot!\n");
-          printf("X won and had %i\n", xCount);
-          printf("While Y had %i\n", oCount);
-
+            xCounter++;
+        }
     }
 
-// Importing the state of how many X  and O's will be placed in the board
+    printf(" %c | %c | %c\n", board[0], board[1], board[2]);
+    printf(" +--+--+--+\n");
+    printf(" %c | %c | %c\n", board[3], board[4], board[5]);
+    printf(" +--+--+--+\n");
+     printf(" %c | %c | %c\n", board[6], board[7], board[8]);
+
+    printf("Well X always marks the spot!\n");
+    printf("X won with %i\n", xCounter);
+    printf("While O had %i\n", oCounter);
+}
+
 void importBoard(char string[])
 {
-    int import = 0, x;
+    int j;
 
-    // Not sure if this array will serve to any use
-    // char state[9] = {'0', '1', '2', '3', '4', '5', '6', '7', '8'};
-
-    for (x = 0; x < 9; x++)
+    for (j = 0; j < 9; j++)
     {
 
-
     }
-
 }
