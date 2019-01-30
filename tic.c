@@ -7,6 +7,8 @@
 void drawBoard();
 
 
+void importBoard(char string[]);
+
 // Array used for Spaces, Characters, and overall shaping of board
 char boardGame[10] = {'0','1', '2', '3', '4', '5', '6', '7', '8', '9'}; // Including the index, it will be 9 but will be counted up from 0 to 10
 
@@ -16,9 +18,9 @@ int didWin();
 int main(void)
 {
 
-    int player = 1;
+    int player = 1; // the player itself
     int i = 0;
-    int position;
+    int position; // each position picked
 
     char put;
     do
@@ -68,7 +70,7 @@ int main(void)
             getchar();
         }
 
-        // Finalized the postion of each character
+        // Finalized the position of each character
          i = didWin();
 
         player++;
@@ -77,13 +79,32 @@ int main(void)
 
         drawBoard();
         if (i == 1)
-            printf("==>\aPlayer %d win ", --player);
+            printf("\aPlayer %d wins!!\n Winner Winner Chicken Dinner!\n", --player);
         else
-            printf("==>\aGame draw");
+            printf("\aGame draw");
 
         getchar();
 
         return 0;
+}
+
+void drawBoard()
+{
+
+        printf("This is the Tic Tac Toe Game\n");
+
+        printf("Player1 will be (X) --- Player2 will be (O)\n");
+
+        printf(" %c | %c | %c\n", boardGame[1], boardGame[2], boardGame[3]);
+
+        printf(" +--+--+--+\n");
+
+        printf(" %c | %c | %c\n", boardGame[4], boardGame[5], boardGame[6]);
+
+        printf(" +--+--+--+\n");
+
+        printf(" %c | %c | %c\n", boardGame[7], boardGame[8], boardGame[9]);
+
 }
 
 
@@ -126,21 +147,3 @@ int didWin() // While be Identified as 'isValidMove as well'
 
 
 
-void drawBoard()
-{
-
-        printf("This is the Tic Tac Toe Game\n");
-
-        printf("Player1 will be (X) --- Player2 will be (O)\n");
-
-        printf(" %c | %c | %c\n", boardGame[1], boardGame[2], boardGame[3]);
-
-        printf(" +--+--+--+\n");
-
-        printf(" %c | %c | %c\n", boardGame[4], boardGame[5], boardGame[6]);
-
-        printf(" +--+--+--+\n");
-
-        printf(" %c | %c | %c\n", boardGame[7], boardGame[8], boardGame[9]);
-
-}
