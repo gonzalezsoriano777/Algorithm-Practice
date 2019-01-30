@@ -67,6 +67,8 @@ int main(void)
             player--;
             getchar();
         }
+
+        // Finalized the postion of each character
          i = didWin();
 
         player++;
