@@ -1,20 +1,85 @@
 #include <stdio.h>
-#include <cs50.h>
+#include <string.h>
+#include <stdlib.h>
+
 
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
 
 // Array used for Spaces, Characters, and overall shaping of board
-char boardGame[9] = {'1', '2', '3', '4', '5', '6', '7', '8'};
+char boardGame[10] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
 void importBoard(char string[]);
 
 int main(void)
 {
 
-    drawBoard();
-    return 0;
+    int player = 1;
+    int i;
+    int choice;
+
+    char put;
+    do
+    {
+        drawBoard();
+
+        player = (player % 2) ? 1 : 2;
+
+        printf("Player %d, enter a number:  ", player);
+        scanf("%d", &choice);
+
+        put = (player == 1) ? 'X' : 'O';
+
+        if (choice == 1 && boardGame[1] == '1')
+            boardGame[1] = put;
+
+        else if (choice == 2 && boardGame[2] == '2')
+            boardGame[2] = put;
+
+        else if (choice == 3 && boardGame[3] == '3')
+            boardGame[3] = put;
+
+        else if (choice == 4 && boardGame[4] == '4')
+            boardGame[4] = put;
+
+        else if (choice == 5 && boardGame[5] == '5')
+            boardGame[5] = put;
+
+        else if (choice == 6 && boardGame[6] == '6')
+            boardGame[6] = put;
+
+        else if (choice == 7 && boardGame[7] == '7')
+            boardGame[7] = put;
+
+        else if (choice == 8 && boardGame[8] == '8')
+            boardGame[8] = put;
+
+        else if (choice == 9 && boardGame[9] == '9')
+            boardGame[9] = put;
+
+        else
+        {
+            printf("Invalid move ");
+
+            player--;
+            getchar();
+        }
+        i = didWin();
+
+        player++;
+    }
+        while (i ==  - 1);
+
+        drawBoard();
+        if (i == 1)
+            printf("==>\aPlayer %d win ", --player);
+        else
+            printf("==>\aGame draw");
+
+        getchar();
+
+        return 0;
 }
 
 void drawBoard()
@@ -50,13 +115,3 @@ void drawBoard()
     printf("While O had %i\n", oCounter);
 }
 
-void importBoard(char string[3])
-{
-
-    int i;
-
-    for (i = 0; i < 9; i++)
-    {
-        // string[i] = "";
-    }
-}
