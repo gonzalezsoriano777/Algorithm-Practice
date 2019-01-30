@@ -5,7 +5,7 @@
 void drawBoard();
 
 
-// New array that will be put into the old array
+// Array used for Spaces, Characters, and overall shaping of board
 char boardGame[9] = {'1', '2', '3', '4', '5', '6', '7', '8'};
 
 void importBoard(char string[]);
@@ -20,31 +20,30 @@ int main(void)
 void drawBoard()
 {
     int i;
-    char board[9];
 
     int xCounter = 0;
     int oCounter = 0;
 
     for (i = 0; i < 9; i++)
     {
-        board[i] = ' ';
+        boardGame[i] = ' ';
 
         if (i % 2 == 1)
         {
-            board[i] = 'O';
+            boardGame[i] = 'O';
             oCounter++;
         } else
         {
-            board[i] = 'X';
+            boardGame[i] = 'X';
             xCounter++;
         }
     }
 
-    printf(" %c | %c | %c\n", board[0], board[1], board[2]);
+    printf(" %c | %c | %c\n", boardGame[0], boardGame[1], boardGame[2]);
     printf(" +--+--+--+\n");
-    printf(" %c | %c | %c\n", board[3], board[4], board[5]);
+    printf(" %c | %c | %c\n", boardGame[3], boardGame[4], boardGame[5]);
     printf(" +--+--+--+\n");
-    printf(" %c | %c | %c\n", board[6], board[7], board[8]);
+    printf(" %c | %c | %c\n", boardGame[6], boardGame[7], boardGame[8]);
 
     printf("Well X always marks the spot!\n");
     printf("X won with %i\n", xCounter);
@@ -58,6 +57,6 @@ void importBoard(char string[3])
 
     for (i = 0; i < 9; i++)
     {
-        string[i] = "";
+        // string[i] = "";
     }
 }
