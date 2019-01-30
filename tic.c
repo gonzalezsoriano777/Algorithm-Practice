@@ -87,6 +87,13 @@ int main(void)
 
 void didWin()
 {
+    // The Different ways in which someone can win, and checks to see those ways that are valid
+    if (boardGame[1] == boardGame[2] && boardGame[2] == boardGame[3])
+    {
+        return 1;
+
+        else if ()
+    }
 
 }
 
