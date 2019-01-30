@@ -16,7 +16,7 @@ int main(void)
 {
 
     int player = 1;
-    int i;
+    int i = 0;
     int choice;
 
     char put;
@@ -31,6 +31,7 @@ int main(void)
 
         put = (player == 1) ? 'X' : 'O';
 
+        // Give you the option on where you want to place your "X, O" depending on the player you are
         if (choice == 1 && boardGame[1] == '1')
             boardGame[1] = put;
 
@@ -60,12 +61,12 @@ int main(void)
 
         else
         {
-            printf("Invalid move ");
+            printf("Invalid move\n");
 
             player--;
             getchar();
         }
-        i = didWin();
+        // i = didWin();
 
         player++;
     }
@@ -82,36 +83,40 @@ int main(void)
         return 0;
 }
 
-void drawBoard()
-{
-    int i;
 
-    int xCounter = 0;
-    int oCounter = 0;
 
-    for (i = 0; i < 9; i++)
-    {
-        boardGame[i] = ' ';
+// Taking a different approach
 
-        if (i % 2 == 1)
-        {
-            boardGame[i] = 'O';
-            oCounter++;
-        } else
-        {
-            boardGame[i] = 'X';
-            xCounter++;
-        }
-    }
+// void drawBoard()
+// {
+//     int i;
 
-    printf(" %c | %c | %c\n", boardGame[0], boardGame[1], boardGame[2]);
-    printf(" +--+--+--+\n");
-    printf(" %c | %c | %c\n", boardGame[3], boardGame[4], boardGame[5]);
-    printf(" +--+--+--+\n");
-    printf(" %c | %c | %c\n", boardGame[6], boardGame[7], boardGame[8]);
+//     int xCounter = 0;
+//     int oCounter = 0;
 
-    printf("Well X always marks the spot!\n");
-    printf("X won with %i\n", xCounter);
-    printf("While O had %i\n", oCounter);
-}
+//     for (i = 0; i < 9; i++)
+//     {
+//         boardGame[i] = ' ';
+
+//         if (i % 2 == 1)
+//         {
+//             boardGame[i] = 'O';
+//             oCounter++;
+//         } else
+//         {
+//             boardGame[i] = 'X';
+//             xCounter++;
+//         }
+//     }
+
+//     printf(" %c | %c | %c\n", boardGame[0], boardGame[1], boardGame[2]);
+//     printf(" +--+--+--+\n");
+//     printf(" %c | %c | %c\n", boardGame[3], boardGame[4], boardGame[5]);
+//     printf(" +--+--+--+\n");
+//     printf(" %c | %c | %c\n", boardGame[6], boardGame[7], boardGame[8]);
+
+//     printf("Well X always marks the spot!\n");
+//     printf("X won with %i\n", xCounter);
+//     printf("While O had %i\n", oCounter);
+// }
 
