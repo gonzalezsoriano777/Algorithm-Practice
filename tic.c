@@ -67,7 +67,7 @@ int main(void)
             player--;
             getchar();
         }
-        // i = didWin();
+         i = didWin();
 
         player++;
     }
