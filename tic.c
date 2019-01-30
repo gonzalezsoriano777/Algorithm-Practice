@@ -8,7 +8,7 @@ void drawBoard();
 
 
 // Array used for Spaces, Characters, and overall shaping of board
-char boardGame[10] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
+char boardGame[10] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'}; // Including the index, it will be 9 but will be counted up from 0 to 10
 
 void importBoard(char string[]);
 
@@ -82,6 +82,12 @@ int main(void)
 
         return 0;
 }
+
+void drawBoard()
+{
+
+}
+
 
 
 
