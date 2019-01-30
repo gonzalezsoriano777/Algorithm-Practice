@@ -18,7 +18,7 @@ int main(void)
 
     int player = 1;
     int i = 0;
-    int choice;
+    int position;
 
     char put;
     do
@@ -28,36 +28,36 @@ int main(void)
         player = (player % 2) ? 1 : 2;
 
         printf("Player %d, enter a number:  ", player);
-        scanf("%d", &choice);
+        scanf("%d", &position);
 
         put = (player == 1) ? 'X' : 'O';
 
         // Give you the option on where you want to place your "X, O" depending on the player you are
-        if (choice == 1 && boardGame[1] == '1')
+        if (position == 1 && boardGame[1] == '1')
             boardGame[1] = put;
 
-        else if (choice == 2 && boardGame[2] == '2')
+        else if (position == 2 && boardGame[2] == '2')
             boardGame[2] = put;
 
-        else if (choice == 3 && boardGame[3] == '3')
+        else if (position == 3 && boardGame[3] == '3')
             boardGame[3] = put;
 
-        else if (choice == 4 && boardGame[4] == '4')
+        else if (position == 4 && boardGame[4] == '4')
             boardGame[4] = put;
 
-        else if (choice == 5 && boardGame[5] == '5')
+        else if (position == 5 && boardGame[5] == '5')
             boardGame[5] = put;
 
-        else if (choice == 6 && boardGame[6] == '6')
+        else if (position == 6 && boardGame[6] == '6')
             boardGame[6] = put;
 
-        else if (choice == 7 && boardGame[7] == '7')
+        else if (position == 7 && boardGame[7] == '7')
             boardGame[7] = put;
 
-        else if (choice == 8 && boardGame[8] == '8')
+        else if (position == 8 && boardGame[8] == '8')
             boardGame[8] = put;
 
-        else if (choice == 9 && boardGame[9] == '9')
+        else if (position == 9 && boardGame[9] == '9')
             boardGame[9] = put;
 
         else
