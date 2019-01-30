@@ -85,7 +85,7 @@ int main(void)
 }
 
 
-int didWin()
+int didWin() // While be Identified as 'isValidMove as well'
 {
     // The Different ways in which someone can win, and checks to see those ways that are valid
 
@@ -123,44 +123,6 @@ int didWin()
 }
 
 
-
-
-
-
-// Taking a different approach
-
-// void drawBoard()
-// {
-//     int i;
-
-//     int xCounter = 0;
-//     int oCounter = 0;
-
-//     for (i = 0; i < 9; i++)
-//     {
-//         boardGame[i] = ' ';
-
-//         if (i % 2 == 1)
-//         {
-//             boardGame[i] = 'O';
-//             oCounter++;
-//         } else
-//         {
-//             boardGame[i] = 'X';
-//             xCounter++;
-//         }
-//     }
-
-//     printf(" %c | %c | %c\n", boardGame[0], boardGame[1], boardGame[2]);
-//     printf(" +--+--+--+\n");
-//     printf(" %c | %c | %c\n", boardGame[3], boardGame[4], boardGame[5]);
-//     printf(" +--+--+--+\n");
-//     printf(" %c | %c | %c\n", boardGame[6], boardGame[7], boardGame[8]);
-
-//     printf("Well X always marks the spot!\n");
-//     printf("X won with %i\n", xCounter);
-//     printf("While O had %i\n", oCounter);
-// }
 
 void drawBoard()
 {
