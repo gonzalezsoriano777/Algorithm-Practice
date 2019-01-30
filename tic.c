@@ -85,18 +85,42 @@ int main(void)
 }
 
 
-void didWin()
+int didWin()
 {
     // The Different ways in which someone can win, and checks to see those ways that are valid
+
     if (boardGame[1] == boardGame[2] && boardGame[2] == boardGame[3])
-    {
         return 1;
 
-        else if ()
-    }
+    else if (boardGame[4] == boardGame[5] && boardGame[5] == boardGame[6])
+        return 1;
 
+    else if (boardGame[7] == boardGame[8] && boardGame[8] == boardGame[9])
+        return 1;
+
+    else if (boardGame[1] == boardGame[4] && boardGame[4] == boardGame[7])
+        return 1;
+
+    else if (boardGame[2] == boardGame[5] && boardGame[5] == boardGame[8])
+        return 1;
+
+    else if (boardGame[3] == boardGame[6] && boardGame[6] == boardGame[9])
+        return 1;
+
+    else if (boardGame[1] == boardGame[5] && boardGame[5] == boardGame[9])
+        return 1;
+
+    else if (boardGame[3] == boardGame[5] && boardGame[5] == boardGame[7])
+        return 1;
+
+    else if (boardGame[1] != '1' && boardGame[2] != '2' && boardGame[3] != '3' &&
+            boardGame[4] != '4' && boardGame[5] != '5' && boardGame[6] != '6' && boardGame[7]
+            != '7' && boardGame[8] != '8' && boardGame[9] != '9')
+
+        return 0;
+    else
+        return  - 1;
 }
-
 
 void drawBoard()
 {
