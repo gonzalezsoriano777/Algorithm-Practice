@@ -7,7 +7,7 @@
 void drawBoard();
 
 
-void importBoard(char string[]);
+
 
 // Array used for Spaces, Characters, and overall shaping of board
 char boardGame[10] = {'0','1', '2', '3', '4', '5', '6', '7', '8', '9'}; // Including the index, it will be 9 but will be counted up from 0 to 10
@@ -16,6 +16,11 @@ char boardGame[10] = {'0','1', '2', '3', '4', '5', '6', '7', '8', '9'}; // Inclu
 int didWin();
 
 int main(void)
+
+// This will also inlcude the importBoard since it will grab the token of both X and O and the state,
+//where the player can pick the position of where they want to place the X or O
+
+
 {
 
     int player = 1; // the player itself
