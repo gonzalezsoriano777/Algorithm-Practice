@@ -6,7 +6,9 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
+int importBoard(void);
 
+int isValidMove();
 
 
 // Array used for Spaces, Characters, and overall shaping of board
@@ -23,6 +25,13 @@ int main(void)
 
 {
 
+    drawBoard();
+    return 0;
+
+}
+
+int importBoard(void)
+{
     int player = 1; // the player itself
     int i = 0;
     int position; // each position picked
@@ -92,6 +101,7 @@ int main(void)
 
         return 0;
 }
+
 
 void drawBoard()
 {
