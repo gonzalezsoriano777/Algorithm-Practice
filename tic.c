@@ -6,7 +6,7 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
-int importBoard(void);
+int importBoard(char *);
 
 int isValidMove();
 
@@ -30,9 +30,45 @@ int main(void)
 
 }
 
-int importBoard(void)
+int importBoard(char *state[9])
 {
-    int player = 1; // the player itself
+
+     int i;
+     char xToken = 'X';
+     char oToken = 'O';
+
+     for (i = 0; i < 10; i++)
+     {
+
+     }
+
+     return 0;
+
+}
+
+
+void drawBoard()
+{
+
+        printf("This is the Tic Tac Toe Game\n");
+
+        printf("Player1 will be (X) --- Player2 will be (O)\n");
+
+        printf(" %c | %c | %c\n", boardGame[1], boardGame[2], boardGame[3]);
+
+        printf(" +--+--+--+\n");
+
+        printf(" %c | %c | %c\n", boardGame[4], boardGame[5], boardGame[6]);
+
+        printf(" +--+--+--+\n");
+
+        printf(" %c | %c | %c\n", boardGame[7], boardGame[8], boardGame[9]);
+
+}
+
+int isValidMove()
+{
+     int player = 1; // the player itself
     int i = 0;
     int position; // each position picked
 
@@ -84,7 +120,7 @@ int importBoard(void)
             getchar();
         }
 
-        // Finalized the position of each character
+         // Finalized the position of each character
          i = didWin();
 
         player++;
@@ -100,27 +136,9 @@ int importBoard(void)
         getchar();
 
         return 0;
-}
-
-
-void drawBoard()
-{
-
-        printf("This is the Tic Tac Toe Game\n");
-
-        printf("Player1 will be (X) --- Player2 will be (O)\n");
-
-        printf(" %c | %c | %c\n", boardGame[1], boardGame[2], boardGame[3]);
-
-        printf(" +--+--+--+\n");
-
-        printf(" %c | %c | %c\n", boardGame[4], boardGame[5], boardGame[6]);
-
-        printf(" +--+--+--+\n");
-
-        printf(" %c | %c | %c\n", boardGame[7], boardGame[8], boardGame[9]);
 
 }
+
 
 
 int didWin() // While be Identified as 'isValidMove as well'
