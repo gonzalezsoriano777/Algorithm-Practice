@@ -6,9 +6,8 @@
 // This is the remake of the game, where we actually play a tic tac toe game
 void drawBoard();
 
-int importBoard(char *);
 
-int isValidMove();
+
 
 
 // Array used for Spaces, Characters, and overall shaping of board
@@ -22,30 +21,80 @@ int main(void)
 // This will also inlcude the importBoard since it will grab the token of both X and O and the state,
 //where the player can pick the position of where they want to place the X or O
 
-
 {
 
-    drawBoard();
-    return 0;
+    int player = 1;
+    int i = 0;
+    int select;
+
+    char choice;
+    do
+    {
+        drawBoard();
+
+        player = (player % 2) ? 1 : 2;
+
+        printf("Player %d, enter a number:  ", player);
+        scanf("%d", &select);
+
+        choice = (player == 1) ? 'X' : 'O';
+
+        if (select == 1 && boardGame[1] == '1')
+            boardGame[1] = choice;
+
+        else if (select == 2 && boardGame[2] == '2')
+            boardGame[2] = choice;
+
+        else if (select == 3 && boardGame[3] == '3')
+            boardGame[3] = choice;
+
+        else if (select == 4 && boardGame[4] == '4')
+            boardGame[4] = choice;
+
+        else if (select == 5 && boardGame[5] == '5')
+            boardGame[5] = choice;
+
+        else if (select == 6 && boardGame[6] == '6')
+            boardGame[6] = choice;
+
+        else if (select == 7 && boardGame[7] == '7')
+            boardGame[7] = choice;
+
+        else if (select == 8 && boardGame[8] == '8')
+            boardGame[8] = choice;
+
+        else if (select == 9 && boardGame[9] == '9')
+            boardGame[9] = choice;
+
+        else
+        {
+            printf("Invalid move ");
+
+            player--;
+            getchar();
+        }
+
+        i = didWin();
+
+        player++;
+
+
+    }
+
+        while (i ==  - 1);
+
+        drawBoard();
+
+        if (i == 1)
+            printf("Player %d wins! Winner Winner Chicken Dinner\n", --player);
+        else
+            printf("Game is a draw\n");
+
+        getchar();
+
+        return 0;
 
 }
-
-int importBoard(char *state[9])
-{
-
-     int i;
-     char xToken = 'X';
-     char oToken = 'O';
-
-     for (i = 0; i < 10; i++)
-     {
-
-     }
-
-     return 0;
-
-}
-
 
 void drawBoard()
 {
@@ -66,78 +115,7 @@ void drawBoard()
 
 }
 
-int isValidMove()
-{
-     int player = 1; // the player itself
-    int i = 0;
-    int position; // each position picked
 
-    char put;
-    do
-    {
-        drawBoard();
-
-        player = (player % 2) ? 1 : 2;
-
-        printf("Player %d, enter a number:  ", player);
-        scanf("%d", &position);
-
-        put = (player == 1) ? 'X' : 'O';
-
-        // Give you the option on where you want to place your "X, O" depending on the player you are
-        if (position == 1 && boardGame[1] == '1')
-            boardGame[1] = put;
-
-        else if (position == 2 && boardGame[2] == '2')
-            boardGame[2] = put;
-
-        else if (position == 3 && boardGame[3] == '3')
-            boardGame[3] = put;
-
-        else if (position == 4 && boardGame[4] == '4')
-            boardGame[4] = put;
-
-        else if (position == 5 && boardGame[5] == '5')
-            boardGame[5] = put;
-
-        else if (position == 6 && boardGame[6] == '6')
-            boardGame[6] = put;
-
-        else if (position == 7 && boardGame[7] == '7')
-            boardGame[7] = put;
-
-        else if (position == 8 && boardGame[8] == '8')
-            boardGame[8] = put;
-
-        else if (position == 9 && boardGame[9] == '9')
-            boardGame[9] = put;
-
-        else
-        {
-            printf("Invalid move\n");
-
-            player--;
-            getchar();
-        }
-
-         // Finalized the position of each character
-         i = didWin();
-
-        player++;
-    }
-        while (i ==  - 1);
-
-        drawBoard();
-        if (i == 1)
-            printf("\aPlayer %d wins!!\n Winner Winner Chicken Dinner!\n", --player);
-        else
-            printf("\aGame draw");
-
-        getchar();
-
-        return 0;
-
-}
 
 
 
@@ -173,7 +151,9 @@ int didWin() // While be Identified as 'isValidMove as well'
             boardGame[4] != '4' && boardGame[5] != '5' && boardGame[6] != '6' && boardGame[7]
             != '7' && boardGame[8] != '8' && boardGame[9] != '9')
 
+
         return 0;
     else
         return  - 1;
+
 }
