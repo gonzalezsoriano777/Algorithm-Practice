@@ -23,22 +23,23 @@ int main(void)
 
 {
 
-    int player = 1;
+    int player = 1; // players (Only 2)
     int i = 0;
-    int select;
+    int select; // option to pick a space for the selected character
 
-    char choice;
+    char choice; // Once chosen it's marked  by choice
     do
     {
-        drawBoard();
+        drawBoard(); // calls the board itself
 
-        player = (player % 2) ? 1 : 2;
+        player = (player % 2) ? 1 : 2; // if the player is odd then it's player 1 else player 2
 
         printf("Player %d, enter a number:  ", player);
         scanf("%d", &select);
 
-        choice = (player == 1) ? 'X' : 'O';
+        choice = (player == 1) ? 'O' : 'X'; // represents what player 1 and player will have whether it's odd or even
 
+        // the state of both X and O in the board
         if (select == 1 && boardGame[1] == '1')
             boardGame[1] = choice;
 
@@ -66,6 +67,7 @@ int main(void)
         else if (select == 9 && boardGame[9] == '9')
             boardGame[9] = choice;
 
+
         else
         {
             printf("Invalid move ");
@@ -86,7 +88,7 @@ int main(void)
         drawBoard();
 
         if (i == 1)
-            printf("Player %d wins! Winner Winner Chicken Dinner\n", --player);
+            printf("Player %d wins!\n Winner Winner Chicken Dinner!!\n", --player);
         else
             printf("Game is a draw\n");
 
@@ -101,7 +103,7 @@ void drawBoard()
 
         printf("This is the Tic Tac Toe Game\n");
 
-        printf("Player1 will be (X) --- Player2 will be (O)\n");
+        printf("Player1 will be (X) --- Player2 will be (O)\n\n");
 
         printf(" %c | %c | %c\n", boardGame[1], boardGame[2], boardGame[3]);
 
@@ -111,7 +113,7 @@ void drawBoard()
 
         printf(" +--+--+--+\n");
 
-        printf(" %c | %c | %c\n", boardGame[7], boardGame[8], boardGame[9]);
+        printf(" %c | %c | %c\n\n", boardGame[7], boardGame[8], boardGame[9]);
 
 }
 
