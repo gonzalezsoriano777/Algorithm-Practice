@@ -37,7 +37,7 @@ int main(void)
         printf("Player %d, enter a number:  ", player);
         scanf("%d", &select);
 
-        choice = (player == 1) ? 'O' : 'X'; // represents what player 1 and player will have whether it's odd or even
+        choice = (player == 1) ? 'O' : 'X'; // represents what player 1 and player 2 will have whether it's odd or even
 
         // the state of both X and O in the board
         if (select == 1 && boardGame[1] == '1')
