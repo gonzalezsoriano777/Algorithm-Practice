@@ -27,7 +27,8 @@ int main(void)
     int i = 0;
     int select; // option to pick a space for the selected character
 
-    char choice; // Once chosen it's marked  by choice
+    char choice;
+
     do
     {
         drawBoard(); // calls the board itself
@@ -35,7 +36,8 @@ int main(void)
         player = (player % 2) ? 1 : 2; // if the player is odd then it's player 1 else player 2
 
         printf("Player %d, enter a number:  ", player);
-        scanf("%d", &select);
+
+        scanf("%d", &select); // scans input of the options the player selects to mark their char.
 
         choice = (player == 1) ? 'O' : 'X'; // represents what player 1 and player 2 will have whether it's odd or even
 
