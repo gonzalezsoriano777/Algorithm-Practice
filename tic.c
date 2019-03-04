@@ -23,7 +23,7 @@ int main(void)
 
 {
 
-    int player = 1; // players (Only 2)
+    int player = 1;  // players (Only 2)
     int i = 0;
     int select; // option to pick a space for the selected character
 
