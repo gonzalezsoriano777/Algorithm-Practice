@@ -15,11 +15,12 @@ int Ballbouncing(double, double, double);
 int main(void)
 {
 
+    int TimingofBall = Ballbouncing(3.0, .66, 1.5);
+    printf("The ball viwed %i times", TimingofBall);
 
-    int TimingofBall = Ballbouncing()
 }
 
-int Ballbouncing(double h, double br, double win)
+int Ballbouncing(double h, double br, double win) // window
 {
-
+    if ()
 }
