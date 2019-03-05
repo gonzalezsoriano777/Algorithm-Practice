@@ -44,7 +44,7 @@ int Ballbouncing(double h, double br, double win) // h - height, br - rate of ba
 
         }
 
-        return viewCount; // # of time the ball is viewed
+        return viewCount; // Number of time the ball is viewed
     }
 }
 
