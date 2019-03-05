@@ -22,7 +22,7 @@ int main(void)
 int Ballbouncing(double h, double br, double win) // h - height, br - rate of ball bouncing, win - window
 {
     // key idea here is, if the condition is not correct
-    if (h <= 0 || (br <= 0 || br >= 1) || win <= h)
+    if (h <= 0 || (br <= 0 || br >= 1) || win >= h)
     {
         return -1; // then return an errors that will break the function
 
@@ -38,15 +38,18 @@ int Ballbouncing(double h, double br, double win) // h - height, br - rate of ba
 
         while(Rebound > win)
         {
+            Rebound = Rebound * br;
+
             viewCount = viewCount + 2;
 
         }
 
-        return viewCount;
+        return viewCount; // # of time the ball is viewed
     }
 }
 
 // Condition
+
     /*
 
     ** Float parameter "h" in meters must be greater than 0**
