@@ -15,6 +15,7 @@ int Ballbouncing(double, double, double);
 int main(void)
 {
     int TimeofBallBouncing = Ballbouncing(3.0, .66, 1.5);
+    // printf("Hello, World\n");
     printf("The # of Times of the ball was viewed as %i times!\n", TimeofBallBouncing);
 
 }
