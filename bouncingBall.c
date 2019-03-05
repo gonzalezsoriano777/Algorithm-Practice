@@ -16,22 +16,25 @@ int main(void)
 {
 
     int TimingofBall = Ballbouncing(3.0, .66, 1.5);
-    printf("The ball viwed %i times", TimingofBall);
+    printf("Hello, World!\n");
+    printf("The ball viwed %i times\n", TimingofBall);
 
 }
 
-int Ballbouncing(double h, double br, double win) //  h - height, br - bounce of ball, win -window
-{
-    // key idea is, return an error if condition isn't properly met
-    if (h <= 0 || (br <= 0 || br >= 1) || win >= h)
-    {
-        return -1;
-    }
-    else
-    {
-        float
-        int
-    }
+// int Ballbouncing(double h, double br, double win) //  h - height, br - bounce of ball, win -window
+// {
+//     // key idea is, return an error if condition isn't properly met
+//     if (h <= 0 || (br <= 0 || br >= 1) || win >= h)
+//     {
+//         return -1;
+//     }
+//     else
+//     {
+//         float newHeight = 0;
+//         int viewCount = 1; // refers to the ball view count
 
 
-}
+//     }
+
+
+// }
