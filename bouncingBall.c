@@ -20,7 +20,18 @@ int main(void)
 
 }
 
-int Ballbouncing(double h, double br, double win) // window
+int Ballbouncing(double h, double br, double win) //  h - height, br - bounce of ball, win -window
 {
-    if ()
+    // key idea is, return an error if condition isn't properly met
+    if (h <= 0 || (br <= 0 || br >= 1) || win >= h)
+    {
+        return -1;
+    }
+    else
+    {
+        float
+        int
+    }
+
+
 }
