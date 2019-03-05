@@ -14,27 +14,44 @@ int Ballbouncing(double, double, double);
 
 int main(void)
 {
-
-    int TimingofBall = Ballbouncing(3.0, .66, 1.5);
-    printf("Hello, World!\n");
-    printf("The ball viwed %i times\n", TimingofBall);
+    int TimeofBallBouncing = Ballbouncing(3.0, .66, 1.5);
+    printf("The # of Times of the ball was viewed as %i times!\n", TimeofBallBouncing);
 
 }
 
-// int Ballbouncing(double h, double br, double win) //  h - height, br - bounce of ball, win -window
-// {
-//     // key idea is, return an error if condition isn't properly met
-//     if (h <= 0 || (br <= 0 || br >= 1) || win >= h)
-//     {
-//         return -1;
-//     }
-//     else
-//     {
-//         float newHeight = 0;
-//         int viewCount = 1; // refers to the ball view count
+int Ballbouncing(double h, double br, double win) // h - height, br - rate of ball bouncing, win - window
+{
+    // key idea here is, if the condition is not correct
+    if (h <= 0 || (br <= 0 || br >= 1) || win <= h)
+    {
+        return -1; // then return an errors that will break the function
 
+    }
+    else
+    {
+        float Rebound = 0;
 
-//     }
+        // ensures, height of 'rebouncing' ball is greater then win param
+        Rebound = h * br;
 
+        int viewCount = 1;
 
-// }
+        while(Rebound > win)
+        {
+            viewCount = viewCount + 2;
+
+        }
+
+        return viewCount;
+    }
+}
+
+// Condition
+    /*
+
+    ** Float parameter "h" in meters must be greater than 0**
+    ** Float parameter “br" must be greater than 0 and less than 1**
+    ** Float parameter “win" must be less than h.**
+
+    */
+
