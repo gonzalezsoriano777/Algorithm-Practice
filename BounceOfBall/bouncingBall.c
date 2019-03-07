@@ -23,7 +23,7 @@ int main(void)
 int BouncingBall(double h, double br, double win) // h - height, br - bounce rate of ball, win - window
 {
     // key idea is, that if the condition is not met then
-    if(h <= 0 || (br <= 0 || br >= 1) || win >= h)
+    if(h <= 0 || br <= 0 || br >= 1)
     {
         return -1; // return an error and break function
     }
