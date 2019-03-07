@@ -19,11 +19,11 @@ int didWin();
 int main(void)
 
 // This will also inlcude the importBoard since it will grab the token of both X and O and the state,
-//where the player can pick the position of where they want to place the X or O
+//where the Player can pick the position of where they want to place the X or O
 
 {
 
-    int player = 1;  // players (Only 2)
+    int Player = 1;  // Players (Only 2)
     int i = 0;
     int select; // option to pick a space for the selected character
 
@@ -33,13 +33,13 @@ int main(void)
     {
         drawBoard(); // calls the board itself
 
-        player = (player % 2) ? 1 : 2; // if the player is odd then it's player 1 else player 2
+        Player = (Player % 2) ? 1 : 2; // if the Player is odd then it's Player 1 else Player 2
 
-        printf("Player %d, enter a number:  ", player);
+        printf("Player %d, enter a number:  ", Player);
 
-        scanf("%d", &select); // scans input of the options the player selects to mark their char.
+        scanf("%d", &select); // scans input of the options the Player selects to mark their char.
 
-        choice = (player == 1) ? 'O' : 'X'; // represents what player 1 and player 2 will have whether it's odd or even
+        choice = (Player == 1) ? 'O' : 'X'; // represents what Player 1 and Player 2 will have whether it's odd or even
 
         // the state of both X and O in the board
         if (select == 1 && boardGame[1] == '1')
@@ -74,13 +74,13 @@ int main(void)
         {
             printf("Invalid move ");
 
-            player--;
+            Player--;
             getchar();
         }
 
         i = didWin();
 
-        player++;
+        Player++;
 
 
     }
@@ -90,7 +90,7 @@ int main(void)
         drawBoard();
 
         if (i == 1)
-            printf("Player %d wins!\n Winner Winner Chicken Dinner!!\n", --player);
+            printf("Player %d wins!\n Winner Winner Chicken Dinner!!\n", --Player);
         else
             printf("Game is a draw\n");
 
