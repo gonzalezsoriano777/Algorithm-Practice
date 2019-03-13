@@ -16,8 +16,13 @@ int main(void)
 
 void drawboard(int x, int y)
 {
-  int x = 0;
-  int y = 0;
+    int size = 1;
+
+    for (int i = 0; i < 0; i++)
+    {
+
+    }
+
 }
 
 
