@@ -7,7 +7,7 @@ int drawboard(int, int);
 
 int main(void)
 {
-    printf("Hello, World\n");
+    printf("Hello, World!\n");
 
 
     drawboard(6, 4);
